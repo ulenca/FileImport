@@ -40,17 +40,15 @@ public class Person implements Comparable<Person>{
 
 	@Override
 	public int compareTo(Person otherPerson) {
-		if(this.phoneNumber==null && otherPerson.phoneNumber!=null) {
-			return 1;
-		}else if (this.phoneNumber!=null && otherPerson.phoneNumber==null) {
-			return -1;
-		}else {
-			return Integer.compare(otherPerson.age, this.age);
-		}	
+			return Integer.compare(this.age, otherPerson.age);
 	}
 
 	public String getPhoneNumber() {
 		return phoneNumber;
+	}
+	
+	public int getAge() {
+		return age;
 	}
 	
 }

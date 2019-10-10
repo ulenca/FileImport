@@ -10,8 +10,6 @@ public class MapperService {
 	//Maps list of list of strings where words are separated by comma to list of people
 	public List<Person> mapStringsToPeople(List<String> listOfStrings){
 		
-		if(listOfStrings.isEmpty()) throw new IllegalArgumentException("List of rows cannot be empty");
-		
 		List<Person> people = new ArrayList<>();
 
 		for (String s:listOfStrings) {
