@@ -1,7 +1,6 @@
 package main;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
@@ -14,7 +13,7 @@ public class DataSearcher {
 		return listOfPeople.size();
 		
 	}
-	public List<Person> findTheOldersPersonWithPhoneNumberNew(List<Person> listOfPeople) {
+	public List<Person> findTheOldestPersonWithPhoneNumber(List<Person> listOfPeople) {
 
 		List<Person> listOfPeopleWithPhoneNumber = listOfPeople.stream()
 				.filter((person)-> person.getPhoneNumber()!=null)

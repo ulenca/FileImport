@@ -21,13 +21,15 @@ public class Application {
 				+ dataSearcher.countPeople(listOfPeople));
 		
 		System.out.println("Oldest person/people with phone: ");
-		List<Person> listOfOldestPeople = dataSearcher.findTheOldersPersonWithPhoneNumberNew(listOfPeople);
+		List<Person> listOfOldestPeople = dataSearcher
+				.findTheOldestPersonWithPhoneNumber(listOfPeople);
+		
 		if(listOfOldestPeople.isEmpty()) {
 			System.out.println("No people with phone number");
 		} else {
 			listOfOldestPeople.forEach((person)->System.out.println(person));
 		}
-        
+		
 	}
 
 }

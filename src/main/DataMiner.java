@@ -1,9 +1,6 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
-
 
 public class DataMiner {
 	
@@ -13,17 +10,11 @@ public class DataMiner {
 	public DataMiner(FileImportService fileImport, MapperService mapper) {
 		
 		this.fileImport = fileImport;
-		this.mapper=mapper;
-		
+		this.mapper=mapper;	
 	}
 	
 	public List<Person> getListOfPeople(String path){
 		return mapper.mapStringsToPeople(fileImport.importFile(path));
 	}
-
-
-	
-
-
 	
 }
